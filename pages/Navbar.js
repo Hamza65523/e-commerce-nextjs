@@ -18,7 +18,7 @@ const Navbar = () => {
            <nav>
           <ul className='flex justify-between py-8 '>
             <div className="flex gap-10 ">
-            <li className='text-xl text-[#8dc8ee]'><FontAwesomeIcon className='text-white mr-2' icon={faCartShopping}/>Redux Shopping</li>
+            <li className='text-xl text-[#8dc8ee]'><FontAwesomeIcon className={` mr-2 ${theme=="dark"?'text-white':'text-black'}`} icon={faCartShopping}/>Redux Shopping</li>
            <Link href='/products'><li className='text-lg hover:bg-[#616c7e8c] cursor-pointer  py-1 px-2 hover:bg-red   rounded-md'>Products</li></Link>
            <Link href='/cart' className='text-lg cursor-pointer hover:bg-[#616c7e8c] py-1 px-2   rounded-md'><li className='text-lg hover:bg-[#616c7e8c] cursor-pointer  py-1 px-2 hover:bg-red   rounded-md'>Cart</li></Link>
             </div>

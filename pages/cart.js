@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import Image from "next/image";
 import Iphone from "../assests/iphone.jpg";
 import { useSelector } from "react-redux";
+import Link from 'next/link'
 const cart = () => {
   const addCrd = useSelector((state)=>state.addToCart.adCrt)
   const count = useSelector((state)=>state.addToCart.count)
@@ -37,7 +38,7 @@ const cart = () => {
                 <p className="underline text-[#92969d]">Add gift wrapping</p>
               </div>
             </div>
-              <span className="text-4xl" onClick={()=>handlerDelete(index)}>X</span>
+              <span className="text-4xl py-2 px-2 cursor-pointer hover:bg-slate-500 rounded-md" onClick={()=>handlerDelete(index)}>X</span>
           </div>
 
           ))}
@@ -67,9 +68,9 @@ const cart = () => {
           </div>
           <div className="flex mt-4 gap-2 text-center justify-center">
             <p className="font-bold text-xl">or</p>
-            <span className="font-bold text-xl cursor-pointer">
-              Continue Shopping
-            </span>
+           <Link href='/products' > 
+             <span  className="font-bold text-xl cursor-pointer"> Continue Shopping</span>
+            </Link>
           </div>
         </div>
       </div>
